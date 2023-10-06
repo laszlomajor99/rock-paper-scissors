@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Rock Paper Scissors Game</title>
+
+<style>
+
+body{
+    background-color: rgb(31, 30, 30);
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.rock 
+    {width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    border: 3px solid whitesmoke;
+    background-color: transparent;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.rock img {
+    width: 50px; 
+    height: 50px; 
+  }
+
+.paper
+    {width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    border: 3px solid whitesmoke;
+    background-color: transparent;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.paper img {
+    width: 50px; 
+    height: 50px; 
+  }
+
+.scissors
+    {width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    border: 3px solid whitesmoke;
+    background-color: transparent;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.scissors img {
+    width: 50px; 
+    height: 50px; 
+  }
+
+.resetbutton {
+ 
+ height: 60px;
+ width:  200px;
+ border-radius: 20px;
+ color: whitesmoke;
+ background-color: transparent;
+ font-size: 20px;
+ border: 2px solid whitesmoke;
+
+}
+
+body {
+    display: grid;
+    place-items: center; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+.centered-container {
+    text-align: center; /* Center the button horizontally */
+}
+
+
+</style>
+
+</head>
+
+<body>
+<div class="mainbox">
+    <div class="centered-container">
+        <h1 class="title">Rock 🗿, Paper 🧻, Scissors ✂</h1>
+    </div>
+    <h2>Computer Choice: <span id="computer-choice"></span></h2>
+    <h2>Your Choice: <span id="user-choice"></span></h2>
+    <h2>Result: <span id="result"></span></h2>
+    
+    <div class="centered-container">
+        <button class="rock" id="rock" onclick="makeChoice('rock')">
+            <img src="pictures/rock-emoji.png" alt="Rock Image">
+        </button>
+        
+        <button class="paper" id="paper" onclick="makeChoice('paper')">
+            <img src="pictures/paper-emoji.png" alt="Paper Image">
+        </button>
+        
+        <button class="scissors" id="scissors" onclick="makeChoice('scissors')">
+            <img src="pictures/scissors-emoji.png" alt="Scissors Image">
+        </button>
+    </div>
+
+
+    <div class="centered-container">
+    <h2>Wins: <span id="wins">0</span> - Losses: <span id="losses">0</span> - Draws: <span id="draws">0</span></h2>
+    </div>
+
+    <div class="centered-container">
+        <button class="resetbutton" onclick="resetScore()">Reset Score</button>
+    </div>
+
+    <script src="app.js" charset="utf-8"></script>
+
+</div>
+</body>
+</html>
